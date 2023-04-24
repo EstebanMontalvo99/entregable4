@@ -5,6 +5,14 @@
   border-radius: 0.4em;
   padding: 1em;
 }
+.user:hover {
+  transform: scale(1.05);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 64, 105, 0.5555555555555556) 53%,
+    rgba(156, 51, 51, 0.4729344729344729) 100%
+  );
+}
 .user__name {
   font-weight: 500;
   font-size: 1.1rem;
@@ -22,7 +30,7 @@
 }
 .user__label {
   font-size: 0.8rem;
-  color: #aaaa;
+  color: #4b4949;
   text-transform: uppercase;
   position: relative;
   left: 1.5em;
