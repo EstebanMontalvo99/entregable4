@@ -24,12 +24,22 @@
   color: white;
   font-weight: 500;
   border-radius: 01em;
-  transition: transfotm 200ms ease;
+  transition: transform 200ms ease;
   align-self: flex-end;
 }
 .app__btn:hover {
   transform: scale(1.05);
   filter: brightness(1.25);
+}
+.usersEmpty {
+  width: 100vw;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100%;
+  font-size: 5rem;
 }
 .user__container {
   margin-top: 1em;

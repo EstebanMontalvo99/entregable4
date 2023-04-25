@@ -19,7 +19,6 @@ function App() {
   const [userChangesModal, setUserChangesModal] = useState(false);
   const [userChanges, setUserChanges] = useState();
   const [delteOrUpdate, setDelteOrUpdate] = useState(true); //True if its delete false if update
-
   useEffect(() => {
     getAllUsers();
   }, []);
@@ -32,6 +31,9 @@ function App() {
   const exitUserCreatedModal = () => {
     setUserCreatedModal(false);
   };
+
+  console.log(users);
+
   return (
     <div className="App">
       <div className="app__header">
@@ -110,7 +112,7 @@ function App() {
                   ? `${userChanges.first_name} ${userChanges.last_name}`
                   : ""}
               </span>{" "}
-              has been {userCreated ? "Created" : "Could not be created"}{" "}
+              {userCreated ? " has been Created" : "Could not be created"}{" "}
               succesffuly
             </p>
             <button className="user__modal__btn" onClick={exitUserCreatedModal}>
