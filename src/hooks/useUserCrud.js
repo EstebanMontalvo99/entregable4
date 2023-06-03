@@ -5,7 +5,7 @@ const useUserCrud = () => {
   const [users, setUsers] = useState();
   const [userCreated, setUserCreated] = useState();
   //GET
-  const url = "https://users-crud.academlo.tech/users/";
+  const url = "https://users-crud-i6g6.onrender.com/api/v1/users";
   const getAllUsers = () => {
     axios
       .get(url)
