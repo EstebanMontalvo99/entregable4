@@ -5,7 +5,7 @@ const useUserCrud = () => {
   const [users, setUsers] = useState();
   const [userCreated, setUserCreated] = useState();
   //GET
-  const url = "https://users-crud-i6g6.onrender.com/api/v1/users";
+  const url = "https://users-crud-i6g6.onrender.com/api/v1/users/";
   const getAllUsers = () => {
     axios
       .get(url)
@@ -29,7 +29,7 @@ const useUserCrud = () => {
 
   //DELETE
   const deleteUser = (id) => {
-    const urlDelete = `${url}${id}/`;
+    const urlDelete = `${url}${id}`;
     axios
       .delete(urlDelete)
       .then((res) => getAllUsers())
@@ -38,9 +38,9 @@ const useUserCrud = () => {
 
   //UPDATE
   const updateUserbyId = (id, data) => {
-    const urlUpdate = `${url}${id}/`;
+    const urlUpdate = `${url}${id}`;
     axios
-      .patch(urlUpdate, data)
+      .put(urlUpdate, data)
       .then((res) => getAllUsers())
       .catch((err) => console.log(err));
   };

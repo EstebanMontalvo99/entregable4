@@ -15,6 +15,7 @@ const User = ({
     setDelteOrUpdate(true);
     setUserChangesModal(true);
     deleteUser(user.id);
+    console.log("Se ELIMINO");
   };
   const updateHandler = () => {
     setUpdateInfo(user);
